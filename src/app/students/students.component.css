@@ -2,17 +2,17 @@ table {
   width: 100%;
 }
 
-.searh-input {
+.search-input {
   outline: none;
   border: 1px solid #CCC;
   padding: 8px 10px;
   border-radius: 3px;
 }
 
-.searh-input:active {
+.search-input:active {
   border: 1px solid #BBB;
 }
 
-.searh-input:focus {
+.search-input:focus {
   border: 1px solid #AAA;
 }

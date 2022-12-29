@@ -15,7 +15,9 @@ export class StudentsComponent implements OnInit {
   displayedColumns: string[] = ['firstName', 'lastName', 'dateOfBirth', 'email', 'mobile', 'gender'];
   dataSource: MatTableDataSource<Student> = new MatTableDataSource<Student>();
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;
-  @ViewChild(MatSort) matSort!: MatSort
+  @ViewChild(MatSort) matSort!: MatSort;
+  filterString = '';
+
 
 
   constructor( private studentService: StudentService) { }
@@ -41,6 +43,10 @@ export class StudentsComponent implements OnInit {
         console.log(errorResponse);
       }
     );
+  }
+
+  filterStudents() {
+    this.dataSource.filter = this.filterString.trim().toLowerCase()
   }
 
 }
